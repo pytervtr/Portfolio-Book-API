@@ -4,11 +4,13 @@ A simple Book API with JWT authentication and email verification, built with Jav
 
 
 ## Features
+
 - User authentication and authorization using JWT.
 - User validation using mail verification.
 - Built with Java Spring, a modern and powerfull Java framework.
 - Written in Java, one of the most used and extended programming languages.
 - Use of PostgreSQL as a database.
+
 
 ## Routes
 
@@ -33,4 +35,16 @@ A simple Book API with JWT authentication and email verification, built with Jav
 | /api/users/remove | DELETE | Remove user account |
 | - | - | - |
 
+
+## To run this project locally
+
+- First you will need to create a database with the name book_db. `CREATE DATABSE BOOK_DB;`.
+- (Optional) Next, you will need to execute the file "book_api_script.sql". If you don't do this, the API will automatically generate the table schemas.
+- Clone this repository using the command git clone https://github.com/pytervtr/Portfolio-Book-API.git .
+- Then, in the file bookapicrud/target/classes/application.properties and change "spring.datasource.url" with your db url.
+- In the same file, also update the username and password with the credentials used by your databse.
+- If you wish to authenticate yourself, add a new key to the mail configuration.
+- Run `mvn clean package` from your project directory.
+- Execute the project using the command `java -jar target/bookapicrud-0.0.1-SNAPSHOT.jar`.
+- Then API will be accessible at `localhost:8081`.
 
